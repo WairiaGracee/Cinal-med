@@ -3,10 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 .header{
     height: 85px;
     width: 100%;
+    position: fixed;
+    background-color: #aec7d7;
+    z-index: 10;
 }
+
 .container{
     padding: 10px 10%;
     display: flex;
@@ -38,6 +45,9 @@
 .logo h2 span{
     color: #3b94b7;
     display: inline-block;
+}
+.menu-icon{
+    display: none;
 }
 nav{
     /* margin-left: 50px; */
@@ -80,7 +90,7 @@ nav button{
 nav button:hover{
     background-color: #3b94b7;
 }
-.hero{
+#hero{
     height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(26, 98, 222,0.5), rgba(37, 82, 172, 0.5)), url(images/jafar-ahmed-E285pJbC4uE-unsplash.jpg);
@@ -122,7 +132,7 @@ nav button:hover{
     background-color: rgba(59, 148, 183,0.6);
 }
 /* about-section */
-.about{
+#about{
     height: 90vh;
     margin: 150px 0 0;
 }
@@ -206,7 +216,7 @@ nav button:hover{
     transform: scale(1.1);
 }
 
-.services{
+#services{
     background: linear-gradient(rgba(26, 98, 222,0.5), rgba(37, 82, 172, 0.5));
     height: 89vh;
 }
@@ -294,7 +304,7 @@ nav button:hover{
     color: #507b8b;
 }
 /* contact form */
-.contact{
+#contact{
     background: linear-gradient(rgba(26, 98, 222,0.35), rgba(37, 82, 172, 0.35));
     height: 87vh;
     margin-top: 70px;
@@ -334,10 +344,125 @@ input{
     height: 80px;
     background-color: #f9f9f9;
     color: #1b396d;
+    padding: 0 20px;
 }
 textarea{
     border: none;
     background-color: #f9f9f9;
     color: #1b396d;
     resize: vertical;
+    padding: 10px 20px;
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    width:100%;
+    height:84vh;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    width:100%;
+    height:100%;
+}
+.gmap_iframe {
+    width:100%!important;
+    height:100%!important;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #efefef;
+    color: #fff;
+    height: 45vh;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+.desc-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+}
+.col1{
+    flex-basis: 25%;
+    text-align: left;
+    height: 100%;
+    padding: 50px 0;
+}
+.col1 .logo{
+    justify-content: left;
+}
+.col1 p{
+    margin-top: 20px;
+    color: #0a024b;
+    letter-spacing: 0.4px;
+    line-height: 25px;
+}
+.col2{
+    height: 100%;
+    flex-basis: 70% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column{
+    flex: 1 1 190px;
+    height: 100%;
+    padding: 50px 0 20px;
+}
+.col-cont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.column h2{
+    font-weight:bold;
+    letter-spacing: 0.4px;
+    color: #0a024b;
+}
+.links a{
+    display: block;
+    text-decoration: none;
+    color:#2c3e50;
+    padding: 8px;
+    transition: 0.6s;
+}
+.links a:hover{
+    color: #007bff;
+}
+.column3 p{
+    color: #2c3e50;
+    margin: 14px 0 20px;
+    text-align: center;
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    color: #28263b;
+}
+
+@media (max-width:480px){
+    .logo{
+        flex-basis: 18%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    
 }
