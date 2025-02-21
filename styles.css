@@ -50,12 +50,12 @@ html{
     display: none;
 }
 nav{
-    /* margin-left: 50px; */
     flex: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul{
     list-style: none;
     width: 100%;
@@ -63,6 +63,11 @@ nav ul{
     justify-content: center;
     align-items: center;
     gap: 32px;
+}
+#menu, #close-menu{
+    font-size: 2em;
+    font-weight: bold;
+    color: #0a024b;
 }
 nav ul li{
     display: inline-block;
@@ -451,18 +456,88 @@ footer {
     color: #28263b;
 }
 
-@media (max-width:480px){
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        padding: 10px 6%;
+    }
+    .head-wrapper{
+        padding-top: 15px;
+    }
     .logo{
-        flex-basis: 18%;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        flex-basis: 30%;
     }
-    .menu-icon{
+    .nav{
+        flex-basis: 66%;
+    }
+    .menu-icon {
         display: block;
+        font-size: 2em;
+        cursor: pointer;
     }
-    nav{
+
+    nav {
+        position: absolute;
+        top: 85px;
+        right: 0;
+        width: 43.5%;
+        background: #aec7d7;
         display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
-    
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav button {
+        margin-top: 15px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    #close-menu {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        color: #0a024b;
+    }
+
+    .hero-wrap p{
+        font-size: 1.4em;
+        margin-bottom: 30px;
+    }
+    .hero-wrap h1{
+        font-size: 3.5em;
+        margin-bottom: 18px;
+    }
+    #about{
+        height: fit-content;
+        padding: 20px 0;
+        margin: 20px 0 0;
+    }
+    .about-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .img-col{
+        height: 400px;
+    }
+    .column{
+        width: 120%;
+    }
+    .text{
+        margin-top:-70px
+    }
 }
+

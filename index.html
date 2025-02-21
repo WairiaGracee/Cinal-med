@@ -18,8 +18,9 @@
                     <img src="images/v987-18a-removebg-preview.png" alt="logo">
                     <h2>CINAL<span>med</span></h2>
                 </div>
-                <i class="bi bi-list menu-icon"></i>
-                <nav>
+                <i class="bi bi-list menu-icon" id="menu"></i>
+                <i class="bi bi-x" id="close-menu"></i>
+                <nav id="navMenu">
                     <ul>
                         <li> <a href="#hero"> HOME</a></li>
                         <li> <a href="#about"> ABOUT</a></li>
@@ -28,7 +29,6 @@
                         <li> <a href="#contact">CONTACT</a></li>
                     </ul>
                     <button>Book Appointment</button>
-                    <i class="bi bi-x"></i>
                 </nav>
             </div>
         </div>
@@ -228,5 +228,24 @@
         </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const menu = document.getElementById('menu')
+            const close = document.getElementById('close-menu')
+            const navMenu = document.getElementById('navMenu')
+            close.style.display = 'none'
+            menu.addEventListener('click', function(){
+                navMenu.classList.toggle('active')
+                menu.style.display = "none"
+                close.style.display = 'block'
+            })
+            close.addEventListener('click', function(){
+                navMenu.classList.remove('active')
+                menu.style.display = "block"
+                close.style.display = 'none'
+            })
+
+        })
+    </script>
 </body>
-</html>
+</html> 
