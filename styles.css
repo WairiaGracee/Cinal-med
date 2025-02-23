@@ -6,10 +6,15 @@
 html{
     scroll-behavior: smooth;
 }
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
 .header{
     height: 85px;
     width: 100%;
     position: fixed;
+    right: 50;
     background-color: #aec7d7;
     z-index: 10;
 }
@@ -99,7 +104,6 @@ nav button:hover{
     height: 100vh;
     width: 100%;
     background: linear-gradient(rgba(26, 98, 222,0.5), rgba(37, 82, 172, 0.5)), url(images/jafar-ahmed-E285pJbC4uE-unsplash.jpg);
-    /* background:  url(images/jafar-ahmed-E285pJbC4uE-unsplash.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +142,7 @@ nav button:hover{
 }
 /* about-section */
 #about{
-    height: 90vh;
+    padding: 30px 0 3%;
     margin: 150px 0 0;
 }
 .about-wrap{
@@ -223,7 +227,7 @@ nav button:hover{
 
 #services{
     background: linear-gradient(rgba(26, 98, 222,0.5), rgba(37, 82, 172, 0.5));
-    height: 89vh;
+    padding: 30px 0 5%;
 }
 .service-wrapper{
     width: 100%;
@@ -311,7 +315,7 @@ nav button:hover{
 /* contact form */
 #contact{
     background: linear-gradient(rgba(26, 98, 222,0.35), rgba(37, 82, 172, 0.35));
-    height: 87vh;
+    padding: 30px 0 5%;
     margin-top: 70px;
 }
 .contact-wrapper{
@@ -375,16 +379,15 @@ textarea{
     height:100%!important;
 }
 footer {
-    padding: 20px;
+    padding: 30px 20px 5%;
     text-align: center;
     background-color: #efefef;
     color: #fff;
-    height: 45vh;
 }
 .footer-content{
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -447,24 +450,18 @@ footer {
     margin: 14px 0 20px;
     text-align: center;
 }
-.copyright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.copyright p{
-    color: #28263b;
-}
+
 
 @media screen and (max-width: 768px) {
-    body{
-        overflow-x: hidden;
-    }
     .container{
-        padding: 10px 6%;
+        padding: 10px 8%;
+    }
+    .header{
+        right: 3px;
     }
     .head-wrapper{
         padding-top: 15px;
+        width: 100%;
     }
     .logo{
         flex-basis: 30%;
@@ -515,7 +512,7 @@ footer {
         margin-bottom: 30px;
     }
     .hero-wrap h1{
-        font-size: 3.5em;
+        font-size: 3.3em;
         margin-bottom: 18px;
     }
     #about{
@@ -539,5 +536,220 @@ footer {
     .text{
         margin-top:-70px
     }
+    /* doctors section */
+    .cards.doctors{
+        display: flex;
+        flex-direction: column;
+    }
+    /* contact section */
+    .contact-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #contact .container{
+        padding: 10px 2%;
+    }
+    textarea{
+        width: 100%;
+    }
+    
+    .desc-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .col1, .col2 {
+        flex-basis: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .col1 .logo {
+        justify-content: center;
+    }
+
+    .col1 p {
+        text-align: center;
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .col2 {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 1 1 auto;
+        padding: 15px 0;
+    }
+
+    .column h2 {
+        font-size: 20px;
+    }
+
+    .links a {
+        font-size: 15.5px;
+        padding: 6px;
+    }
+
+    .column3 p {
+        font-size: 15.5px;
+    }
+
+}
+@media (max-width: 544px){
+    .hero-wrap h1{
+        font-size: 2.8em;
+        margin-bottom: 18px;
+    }
 }
 
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+    .container {
+        padding: 10px 4%;
+    }
+    
+    /* HEADER */
+    .header {
+        height: 75px;
+        width: 100%;
+    }
+    .logo {
+        flex-basis: 40%;
+    }
+    nav {
+        flex-basis: 55%;
+    }
+    nav ul{
+        gap: 15px;
+    }
+    nav ul li{
+        width: 70px;
+    }
+    nav ul li a{
+        font-size: 0.85em;
+    }
+    
+    /* HERO SECTION */
+    .hero-wrap {
+        margin-top: 140px;
+        text-align: center;
+    }
+    .hero-wrap h1 {
+        font-size: 3.5em;
+    }
+    .hero-wrap p {
+        font-size: 1.5em;
+    }
+    .discover-btn {
+        width: 170px;
+        padding: 12px;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+        height: auto;
+        margin: 0;
+        padding: 20px 0;
+    }
+    .about-wrap {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .img-col {
+        width: 100%;
+        height: 400px;
+    }
+    .text {
+        margin-left: 0;
+        padding: 15px;
+    }
+    .text h1 span {
+        font-size: 2.2em;
+    }
+    .text ul{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    /* SERVICES */
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 50px;
+    }
+    
+    /* DOCTORS SECTION */
+    .cards.doctors {
+        flex-direction: column;
+    }
+
+    /* CONTACT SECTION */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+    textarea {
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .desc-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .col1, .col2 {
+        flex-basis: 100%;
+        padding: 15px 0;
+    }
+    .col2{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .column {
+        flex: 1 1 auto;
+        padding: 12px 0;
+    }
+    .column h2 {
+        font-size: 18px;
+    }
+    .links a {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .column3 p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 1231px){
+    .header {
+        height: 75px;
+        width: 100%;
+    }
+    .logo {
+        flex-basis: 40%;
+    }
+    nav {
+        flex-basis: 55%;
+    }
+    nav ul{
+        gap: 35px;
+    }
+    nav ul li{
+        width: 69px;
+    }
+    nav ul li a{
+        font-size: 0.87em;
+    }
+    
+}
+@media(max-width:900px){
+    nav ul{
+        gap: 23px;
+    }
+}
